@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 2410561337
+    locked: 0
+  - name: on top of floor
+    uniqueID: 1421870273
+    locked: 0
+  - name: collision objects
+    uniqueID: 3127449235
+    locked: 0
+  - name: Interactables
+    uniqueID: 2119957939
+    locked: 0
+  - name: Player
+    uniqueID: 3193707397
     locked: 0
