@@ -5,26 +5,45 @@ using UnityEngine;
 
 public class FielfOfViewScript : MonoBehaviour
 {
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static Vector3 GetVectorFromAngle(float angle)
     {
         //angle = 0 -> 360
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad));
     }
-    
-    
+
+    public static float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+        
+        return n;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    [SerializeField] private LayerMask layerMask; 
     private Mesh mesh;
+    private float fov;
+    private Vector3 origin;
+    private float startingAngle;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        origin = Vector3.zero;
     }
-    private void Update() 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    private void LateUpdate() 
     { 
-        float fov = 90f;
+        float fov = 40f;
         Vector3 origin = Vector3.zero;
-        int rayCount = 250;
+        int rayCount = 100;
         float angle = 0f;
         float angleIncrease = fov / rayCount;
         float viewDistance = 1f;
@@ -40,7 +59,7 @@ public class FielfOfViewScript : MonoBehaviour
         for (int i = 0; i < rayCount; i++)
         {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin,GetVectorFromAngle(angle), viewDistance);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin,GetVectorFromAngle(angle), viewDistance, layerMask);
             if (raycastHit2D.collider == null)
             {
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
@@ -69,5 +88,13 @@ public class FielfOfViewScript : MonoBehaviour
         mesh.vertices = verticies;
         mesh.uv = uv;
         mesh.triangles = triangles;
+    }
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+    public void SetAimDirection(Vector2 movementInput)
+    {
+        startingAngle = GetAngleFromVectorFloat(movementInput);
     }
 }

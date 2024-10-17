@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    [SerializeField] private FielfOfViewScript FielfOfView;
+
 
     //raycast sends out a prediction to detect if there's any walls or anything for thep layer to interact with before moving
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate ()
     {
+        
         //if movmenet is 0, dont move.
         if (movementInput != Vector2.zero)
         {
@@ -45,7 +48,8 @@ public class PlayerController : MonoBehaviour
                 if (!success)
                 {
                     success = TryMove(new Vector2(0, movementInput.y)); //checks if we can move up down
-
+                    FielfOfView.SetAimDirection(movementInput);
+                    FielfOfView.SetOrigin(transform.position);
                     //all of this lets us slide across collision object
                 }
             }
