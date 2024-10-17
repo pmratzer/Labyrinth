@@ -24,7 +24,7 @@ public class FielfOfViewScript : MonoBehaviour
     { 
         float fov = 90f;
         Vector3 origin = Vector3.zero;
-        int rayCount = 50;
+        int rayCount = 250;
         float angle = 0f;
         float angleIncrease = fov / rayCount;
         float viewDistance = 1f;
