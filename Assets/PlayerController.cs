@@ -1,8 +1,17 @@
+
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
+
+
+
+
+
 
 
 public class PlayerController : MonoBehaviour
@@ -19,7 +28,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private Animator animator;
+<<<<<<< Updated upstream
 
+=======
+    private Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
+   
+>>>>>>> Stashed changes
 
     //raycast sends out a prediction to detect if there's any walls or anything for thep layer to interact with before moving
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -30,10 +45,16 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     private void FixedUpdate ()
     {
+<<<<<<< Updated upstream
+=======
+       
+
+>>>>>>> Stashed changes
         //if movmenet is 0, dont move.
         if (movementInput != Vector2.zero)
         {
@@ -45,7 +66,11 @@ public class PlayerController : MonoBehaviour
                 if (!success)
                 {
                     success = TryMove(new Vector2(0, movementInput.y)); //checks if we can move up down
+<<<<<<< Updated upstream
 
+=======
+                    
+>>>>>>> Stashed changes
                     //all of this lets us slide across collision object
                 }
             }
@@ -64,7 +89,8 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
 
         }
-
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     private bool TryMove(Vector2 direction)
@@ -100,6 +126,7 @@ public class PlayerController : MonoBehaviour
             //feeds movement inputs to animator
             animator.SetFloat("XInput", movementInput.x);
             animator.SetFloat("YInput", movementInput.y);
+         
         }
     }
 }

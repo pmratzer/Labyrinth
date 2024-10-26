@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableObject : CollidableObject
 {
     private bool z_Interacted = false;
+    
 
     protected override void OnCollided(GameObject collidedObject)
     {
@@ -22,4 +23,6 @@ public class InteractableObject : CollidableObject
             Debug.Log("Interact With " + name);
         }
     }
+
+   
 }
