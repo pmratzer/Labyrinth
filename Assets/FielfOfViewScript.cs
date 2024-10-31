@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -39,7 +37,7 @@ public class FielfOfViewScript : MonoBehaviour
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    private void LateUpdate() 
+    private void Update() 
     { 
         float fov = 40f;
         Vector3 origin = Vector3.zero;
@@ -89,12 +87,5 @@ public class FielfOfViewScript : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
     }
-    public void SetOrigin(Vector3 origin)
-    {
-        this.origin = origin;
-    }
-    public void SetAimDirection(Vector2 movementInput)
-    {
-        startingAngle = GetAngleFromVectorFloat(movementInput);
-    }
+   
 }
