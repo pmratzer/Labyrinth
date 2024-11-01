@@ -105,4 +105,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("YInput", movementInput.y);
         }
     }
+
+    
 }
