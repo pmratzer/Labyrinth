@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+   
+
     
 
 
@@ -107,4 +109,7 @@ public class PlayerController : MonoBehaviour
     }
 
     
+
+   
+
 }

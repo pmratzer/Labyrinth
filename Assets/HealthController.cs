@@ -8,8 +8,8 @@ public class HealthController : MonoBehaviour
     private float _maxHealth = 100;
     private float _currentHealth;
     [SerializeField] private Image _healthBarFill;
-    //game controller for death here
-    [SerializeField] private float _damageAmount;
+    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private float _damageAmount,_sanityAmount;
     [SerializeField] private Transform _healthBarTransform;
     private Camera _camera;
 
@@ -28,9 +28,14 @@ public class HealthController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("obstacle"))
+        if (collision.CompareTag("Enemy"))
         {
-            TakeDamage(20);
+            TakeDamage(_damageAmount);
+        }
+        else if (collision.CompareTag("Sanity"))
+        {
+            Sanity(_sanityAmount);
+            collision.gameObject.SetActive(false);
         }
     }
     private void TakeDamage(float amount)
@@ -39,9 +44,16 @@ public class HealthController : MonoBehaviour
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         if (_currentHealth == 0)
         {
-            //game controller for death here
             _currentHealth = _maxHealth;
         }
+        UpdateHealthBar();
+    }
+
+    private void Sanity(float amount)
+    {
+        _currentHealth += amount;
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+        UpdateHealthBar();
     }
     private void UpdateHealthBar()
     {
