@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 1375727832366008294}
   - component: {fileID: 6552445432582045503}
   - component: {fileID: 3158696694427818364}
+  - component: {fileID: 8036507847302730026}
+  - component: {fileID: 3209043806307601215}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -323,3 +325,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8036507847302730026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140933817184210255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85260790f1259244bc9a8711cab7b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBarFill: {fileID: 0}
+  _playerController: {fileID: 8360219450262120331}
+  _damageAmount: 20
+  _sanityAmount: 20
+  _healthBarTransform: {fileID: 0}
+--- !u!114 &3209043806307601215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140933817184210255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b731b7a9375dc1458b0be57dba6e313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
+  inventorySize: 5
