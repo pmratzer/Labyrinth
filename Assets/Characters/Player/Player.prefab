@@ -355,4 +355,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
-  inventorySize: 5
+  inventoryData: {fileID: 11400000, guid: 3f5a82492cef0824cb32671da54e415a, type: 2}
