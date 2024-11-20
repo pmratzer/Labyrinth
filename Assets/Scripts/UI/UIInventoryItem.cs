@@ -13,7 +13,8 @@ public class UIInventoryItem : MonoBehaviour
     [SerializeField] private TMP_Text quantityTxt;
     [SerializeField] private Image borderImage;
 
-    public event Action<UIInventoryItem> OnItemClicked,OnItemDroppedOn,OnItemBeginDrag,OnItemEndDrag,OnRightMouseBtnClick;
+    public event Action<UIInventoryItem> OnItemClicked,
+        OnItemDroppedOn,OnItemBeginDrag,OnItemEndDrag,OnRightMouseBtnClick;
 
     private bool empty = true;
     public void Awake()
@@ -21,15 +22,15 @@ public class UIInventoryItem : MonoBehaviour
         ResetData();
         Deselect();
     }
-
-    public void Deselect()
+    public void ResetData()
     {
         this.itemImage.gameObject.SetActive(false);
         empty = true;
     }
 
-    public void ResetData()
+    public void Deselect()
     {
+        
         borderImage.enabled = false;
     }
 
@@ -56,7 +57,7 @@ public class UIInventoryItem : MonoBehaviour
     }
     public void OnEndDrag()
     {
-        OnItemBeginDrag?.Invoke(this);
+        OnItemEndDrag?.Invoke(this);
     }
     public void OnPointerClick(BaseEventData data)
     {
