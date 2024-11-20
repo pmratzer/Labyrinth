@@ -4,7 +4,6 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu]
-
 public class InventorySO : ScriptableObject
 {
     [SerializeField]
@@ -16,13 +15,12 @@ public class InventorySO : ScriptableObject
     public void Initialize()
     {
         inventoryItems = new List<InventoryItem>();
-        for( int i = 0;i<Size;i++)
+        for (int i = 0; i < Size; i++)
         {
             inventoryItems.Add(InventoryItem.GetEmptyItem());
-           
         }
-      
     }
+
     public void AddItem(ItemSO item, int quantity)
     {
         for (int i = 0; i < inventoryItems.Count; i++)
@@ -37,20 +35,20 @@ public class InventorySO : ScriptableObject
             }
         }
     }
-    public Dictionary<int, InventoryItem> GetCurrentInventoryState()
+
+    public Dictionary<int,InventoryController> GetCurrentInventoryState()
     {
         Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
         for (int i = 0; i < inventoryItems.Count; i++)
         {
-            if (inventoryItems[i].IsEmpty)
+            if (inventoryItems[i].IsEmpty) 
                 continue;
             returnValue[i] = inventoryItems[i];
-
-
-        }  
+        }
         return returnValue;
     }
 }
+
 [Serializable]
 public struct InventoryItem
 {
@@ -59,19 +57,18 @@ public struct InventoryItem
 
     public bool IsEmpty => item == null;
 
-    public InventoryItem ChangeQuanity(int newQuantity)
+    public InventoryItem ChangeQuantity(int newQuantity)
     {
         return new InventoryItem
         {
             item = this.item,
-            quantity = newQuantity,
-
+            quantity = newQuantity
         };
     }
+
     public static InventoryItem GetEmptyItem() => new InventoryItem
     {
         item = null,
-        quantity = 0,
+        quantity = 0
     };
-
 }
