@@ -57,6 +57,9 @@ TagManager:
   - name: collision objects
     uniqueID: 3127449235
     locked: 0
+  - name: CollisionTop
+    uniqueID: 374241329
+    locked: 0
   - name: Interactables
     uniqueID: 2119957939
     locked: 0
