@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InventoryItem>k__BackingField: {fileID: 11400000, guid: 38cf28e829bb24d40a3410366f2595cb, type: 2}
-  <Quantity>k__BackingField: 5
+  <Quantity>k__BackingField: 10
   audioSource: {fileID: 2678226165289568493}
   duration: 0.3
 --- !u!82 &2678226165289568493
@@ -150,7 +150,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7ab1d9ce243bb564d9ec01dbea57b31b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.163
+  m_Volume: 0.244
   m_Pitch: 1
   Loop: 0
   Mute: 0

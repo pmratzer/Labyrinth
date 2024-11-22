@@ -14,23 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItems:
   - quantity: 1
-    item: {fileID: 11400000, guid: 536d30c52fca08c4f82a70ce020188ad, type: 2}
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
   - quantity: 1
-    item: {fileID: 11400000, guid: 536d30c52fca08c4f82a70ce020188ad, type: 2}
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
   - quantity: 1
-    item: {fileID: 11400000, guid: 536d30c52fca08c4f82a70ce020188ad, type: 2}
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
   - quantity: 1
-    item: {fileID: 11400000, guid: 536d30c52fca08c4f82a70ce020188ad, type: 2}
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
   - quantity: 1
-    item: {fileID: 11400000, guid: 536d30c52fca08c4f82a70ce020188ad, type: 2}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 0
-    item: {fileID: 0}
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: 278fd0385f832a84cb745042343498b1, type: 2}
+    itemState: []
   <Size>k__BackingField: 10
