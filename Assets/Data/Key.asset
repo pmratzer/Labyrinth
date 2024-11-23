@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe516fece2482045a1e43fa4c79fa80, type: 3}
+  m_Script: {fileID: 11500000, guid: 39a86308f177be043bd439254c670542, type: 3}
   m_Name: Key
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
@@ -17,4 +17,7 @@ MonoBehaviour:
   <Name>k__BackingField: Key
   <Description>k__BackingField: Opens Doors!!!
   <ItemImage>k__BackingField: {fileID: 17210893, guid: 57447aee3a159ac4fb3f2645fb4db7b7, type: 3}
-  <DefaultParametersList>k__BackingField: []
+  <DefaultParametersList>k__BackingField:
+  - itemParameter: {fileID: 11400000, guid: b311679f746913742962d4072e0ff3e9, type: 2}
+    value: 100
+  <actionSFX>k__BackingField: {fileID: 8300000, guid: 1e4d438f9d286304b918672a47cba77f, type: 3}

@@ -33,7 +33,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    private void Heal(float amount)
+    public void Heal(float amount)
     {
         _currentHealth += amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
