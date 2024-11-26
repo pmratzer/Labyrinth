@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Floor/kitchen.unity
     guid: e2c71d89604ced84fbc7daf129dd6a7a
+  - enabled: 1
+    path: Assets/Labyrinth-Main1.unity
+    guid: 75c250e2dc81a9c45be45ed40589958e
   m_configObjects: {}
