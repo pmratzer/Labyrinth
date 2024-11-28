@@ -15,6 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/First Floor/kitchen.unity
     guid: e2c71d89604ced84fbc7daf129dd6a7a
   - enabled: 1
-    path: Assets/Labyrinth-Main1.unity
-    guid: 75c250e2dc81a9c45be45ed40589958e
+    path: Assets/Scenes/First Floor/garage.unity
+    guid: e9231e89f6799dc4198ed92fa43508c0
+  - enabled: 1
+    path: Assets/Scenes/Second Floor/hallway2ndFloor.unity
+    guid: aa2f5954faf5ae6498fd8e458da3b8e3
+  - enabled: 1
+    path: Assets/Scenes/Second Floor/Bedroom.unity
+    guid: 6466b24e957f8e346a13ea1a09dd91c2
+  - enabled: 1
+    path: Assets/Scenes/Second Floor/Master Bedroom.unity
+    guid: 1e047513cc0a60b458516a1c9c6f27b0
+  - enabled: 1
+    path: Assets/Scenes/Second Floor/Bathroom.unity
+    guid: 2d3c567787b1db14d9dc1d4f792c99f7
   m_configObjects: {}
