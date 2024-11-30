@@ -20,11 +20,6 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
-   
-
-    
-
-
     //raycast sends out a prediction to detect if there's any walls or anything for thep layer to interact with before moving
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
@@ -71,7 +66,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
     private bool TryMove(Vector2 direction)
     {
         if (direction != Vector2.zero)
