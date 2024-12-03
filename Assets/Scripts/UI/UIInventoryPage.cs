@@ -27,14 +27,13 @@ namespace Inventory.UI
 
         [SerializeField] private ItemActionPanel actionPanel;
 
-        private void Awake()
+        public void Awake()
         {
             Hide();
             mouseFollower.Toggle(false);
             itemDescription.ResetDescription();
 
         }
-
 
         public void InitializeInventoryUI(int inventorysize)
         {
@@ -58,6 +57,7 @@ namespace Inventory.UI
             {
                 item.ResetData();
                 item.Deselect();
+
             }
         }
         internal void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)

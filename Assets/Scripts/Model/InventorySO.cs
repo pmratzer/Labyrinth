@@ -24,6 +24,10 @@ namespace Inventory.Model
             {
                 inventoryItems.Add(InventoryItem.GetEmptyItem());
             }
+            if (GlobalVars.inventoryLoaded == false)
+            {
+                GlobalVars.currentInventoryItems = inventoryItems;
+            }
         }
 
         public int AddItem(ItemSO item, int quantity, List<ItemParameter> itemState = null)
@@ -156,6 +160,14 @@ namespace Inventory.Model
 
         private void InformAboutChange()
         {
+            if (GlobalVars.fromNewInventory == true)
+            {
+                GlobalVars.fromNewInventory = false;
+            }
+            else
+            {
+                GlobalVars.currentInventoryItems = inventoryItems;
+            }
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
     }

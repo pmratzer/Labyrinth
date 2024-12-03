@@ -31,12 +31,27 @@ namespace Inventory
         {
             inventoryData.Initialize();
             inventoryData.OnInventoryUpdated += UpdateInventoryUI;
-            foreach (InventoryItem item in initialItems)
+            if (GlobalVars.inventoryLoaded == false)
             {
-                if (item.IsEmpty)
-                    continue;
-                inventoryData.AddItem(item);
+                foreach (InventoryItem item in initialItems)
+                {
+                    if (item.IsEmpty)
+                        continue;
+                    inventoryData.AddItem(item);
+                }
+                GlobalVars.inventoryLoaded = true;
             }
+            else
+            {
+                foreach (InventoryItem item in GlobalVars.currentInventoryItems)
+                {
+                    if (item.IsEmpty)
+                        continue;
+                    GlobalVars.fromNewInventory = true;
+                    inventoryData.AddItem(item);
+                }
+            }
+
         }
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
