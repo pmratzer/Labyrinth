@@ -533,27 +533,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677019502696684641, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1826230744055560938, guid: 2f88a6faf712f5846b47c3967ea80f02, type: 3}
       propertyPath: m_Name
@@ -3174,6 +3174,7 @@ GameObject:
   - component: {fileID: 1334239375}
   - component: {fileID: 1334239374}
   - component: {fileID: 1334239373}
+  - component: {fileID: 1334239376}
   m_Layer: 0
   m_Name: kitchenDrawer1
   m_TagString: Untagged
@@ -3319,6 +3320,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1334239376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334239371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2204a3b97119604a8808724ceca3f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  d_filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &1357169490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,6 +7880,10 @@ PrefabInstance:
     - target: {fileID: 6696817905370585817, guid: 3d8599ed03876ac499c99bfcf5c609ea, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696817905370585817, guid: 3d8599ed03876ac499c99bfcf5c609ea, type: 3}
+      propertyPath: m_TagString
+      value: key
       objectReference: {fileID: 0}
     - target: {fileID: 8827765740157125484, guid: 3d8599ed03876ac499c99bfcf5c609ea, type: 3}
       propertyPath: <Quantity>k__BackingField
